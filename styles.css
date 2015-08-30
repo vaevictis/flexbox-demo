@@ -31,6 +31,7 @@ body {
 .flex-container {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .flex-item {
@@ -71,7 +72,7 @@ main.flex-container .flex-item__article {
   overflow: auto;
   overflow-y: scroll;
   /*height: whole viewport - header height - footer height - border*/
-  height: calc(100vh - 200px - 6px);
+  max-height: calc(100vh - 200px - 6px);
 }
 
 .flex-item__article h1 {
