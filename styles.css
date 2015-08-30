@@ -1,3 +1,10 @@
+/* Box-sizing border-box FTW */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after { box-sizing: inherit; }
+
+/* Some color definitions - for a better-looking World */
 .flex-item1 { background-color: #e56343; }
 .flex-item2 { background-color: #daa844; }
 .flex-item3 { background-color: #6ab59f; }
@@ -9,21 +16,66 @@
 .flex-item9 { background-color: #8c3232; }
 .flex-item10 { background-color: #1f8762; }
 
-.flex-container {
-
-}
-
-.flex-item--responsive {
-  display: none;
+body {
+  height: 100vh;
+  border: 3px solid orange;
 }
 
 .flex-item {
   color: black;
-  font-family: 'KiloGram', 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
-  font-size: 128px;
-  padding-left: 20px
+  font-family: 'KiloGram';
+  font-size: 96px;
+  text-align: center;
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
 
+.flex-item {
+  flex: 1 1 auto;
+}
+
+
+/* mail app specific */
+div.flex-container {
+    flex-direction: column;
+    align-items: stretch;
+}
+header.flex-item,
+footer.flex-item {
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 100px;
+}
+
+main.flex-container.flex-item {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+main.flex-container {
+  flex-direction: row;
+}
+main.flex-container .flex-item {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 150px;
+}
+main.flex-container .flex-item__article {
+  flex-grow: 1;
+  flex-shrink: 1;
+  font-size: 32px;
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  overflow: auto;
+  overflow-y: scroll;
+  /*height: whole viewport - header height - footer height - border*/
+  height: calc(100vh - 200px - 6px);
+}
+
+.flex-item__article h1 {
+  font-family: 'KiloGram';
+  font-weight: normal;
+  font-size: 96px;
 }
