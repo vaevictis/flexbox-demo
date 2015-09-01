@@ -76,3 +76,18 @@ main.flex-container .flex-item__article {
   font-weight: normal;
   font-size: 96px;
 }
+
+@media only screen and (max-width: 768px) {
+  main.flex-container {
+    flex-direction: column;
+  }
+  main.flex-container .flex-item4 {
+    order: 1;
+  }
+  main.flex-container .flex-item2 {
+    order: 2;
+  }
+  main.flex-container .flex-item3 {
+    order: 3;
+  }
+}
