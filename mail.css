@@ -35,17 +35,44 @@ body {
   height: 100%;
 }
 
-@media only screen and (max-width: 768px) {
-  main.flex-container {
+/* mail app specific */
+div.flex-container {
     flex-direction: column;
-  }
-  main.flex-container .flex-item4 {
-    order: 2;
-  }
-  main.flex-container .flex-item2 {
-    order: 3;
-  }
-  main.flex-container .flex-item3 {
-    order: 4;
-  }
+    align-items: stretch;
+}
+header.flex-item,
+footer.flex-item {
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: 100px;
+}
+
+main.flex-container.flex-item {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+main.flex-container {
+  flex-direction: row;
+}
+main.flex-container .flex-item {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 150px;
+}
+main.flex-container .flex-item__article {
+  flex-grow: 1;
+  flex-shrink: 1;
+  font-size: 32px;
+  font-family: 'Avant Garde', Avantgarde, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  overflow: auto;
+  overflow-y: scroll;
+  /*height: whole viewport - header height - footer height - border*/
+  max-height: calc(100vh - 200px - 6px);
+}
+
+.flex-item__article h1 {
+  font-family: 'KiloGram';
+  font-weight: normal;
+  font-size: 96px;
 }
