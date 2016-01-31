@@ -1,0 +1,62 @@
+/* Box-sizing border-box FTW */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after { box-sizing: inherit; }
+
+
+/* Some color definitions - for a better-looking World */
+.flex-item1 { background-color: #e56343; }
+.flex-item2 { background-color: #daa844; }
+.flex-item3 { background-color: #6ab59f; }
+.flex-item4 { background-color: #5da0b3; }
+.flex-item5 { background-color: #e89292; }
+/*.flex-item6 { background-color: #aae2e2; }
+.flex-item7 { background-color: #334a56; }
+.flex-item8 { background-color: #b08358; }
+.flex-item9 { background-color: #8c3232; }
+.flex-item10 { background-color: #1f8762; }*/
+body {
+  height: 100vh;
+  border: 5px solid blue;
+}
+
+.flex-container {
+  /********************/
+  /*Flex & inline-flex*/
+  /*border: 5px solid lightgreen;*/
+  /*display: flex;*/
+
+  /********************/
+  /*vertical centering*/
+  /*main axis*/
+  /*justify-content: center;*/
+  /*cross axis*/
+  /*align-items: center;*/
+  /*height: 100%;*/
+
+  /********************/
+  /*Flex direction*/
+  /*flex-direction: row;*/
+  /*flex-wrap: wrap;*/
+}
+
+.flex-item {
+  color: black;
+  font-family: 'KiloGram';
+  font-size: 96px;
+  text-align: center;
+
+  /********************/
+  /*item size management*/
+  /*width: 100px;*/
+  /*flex-grow: 0;*/
+  /*flex-shrink: 0;*/
+  /*flex-basis: auto;*/
+  /*flex: 0 0 auto;*/
+}
+
+/*.flex-item4 {
+  flex-grow: 3;
+  flex-shrink: 3;
+}*/
